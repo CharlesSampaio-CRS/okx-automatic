@@ -2,3 +2,4 @@ apscheduler==3.8.1
 flask==2.1.1
 requests==2.27.1
 python-dotenv==1.0.1
+gunicorn==21.2.0
