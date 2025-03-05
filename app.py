@@ -7,11 +7,15 @@ import requests
 from flask import Flask, jsonify, request
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
+import os
+from dotenv import load_dotenv
 
-API_KEY = "e2b91e6f-cc7f-4e62-95a1-2ffc7dde6c63"
-API_SECRET = "75579DA822EFFF6455F89943722719A5"
-PASSPHRASE = "Crs@00148600"
-BASE_URL = "https://www.okx.com"
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
+API_SECRET = os.getenv("API_SECRET")
+PASSPHRASE = os.getenv("PASSPHRASE")
+BASE_URL = os.getenv("BASE_URL")
 
 app = Flask(__name__)
 
